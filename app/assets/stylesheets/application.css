@@ -8,3 +8,267 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+:root {
+  --black: #393939;
+  --off-white: #ededed;
+  --dark-gray: #666;
+  --medium-gray: #6c757d;
+  --light-gray: #c2c2c2;
+  --blue: #237cbe;
+  --light-blue: #8fc4ea;
+  --orange: #e8890c;
+  --yellow: #ffc107;
+  --light-yellow: #ffc;
+  --red: #dc3545;
+
+  --secondary-text-color: var(--medium-gray);
+  --accent-color: var(--orange);
+  --secondary-link-color: var(--light-blue);
+  --border-color: var(--light-gray);
+  --error-color: var(--red);
+  --error-background-color: var(--light-yellow);
+  --sold-out-color: var(--yellow);
+}
+
+body {
+  color: var(--black);
+  background: var(--off-white);
+}
+
+.content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: var(--blue);
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin-left: 1rem;
+  color: var(--light-blue);
+  font-size: 2.5rem;
+}
+
+header nav a {
+  color: var(--light-blue);
+}
+
+header nav a.button {
+  border: 1px solid var(--medium-gray);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.25rem;
+}
+
+section.event {
+  display: flex;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted var(--border-color);
+}
+
+section.event:last-child {
+  border-bottom: none;
+}
+
+section.event .image {
+  flex: 0 0 25%;
+  text-align: center;
+}
+
+section.event .image img {
+  margin-top: 1rem;
+  width: 75px;
+}
+
+section.event .summary {
+  flex: 1;
+}
+
+section.event h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+section.event h3 {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+  font-weight: 400;
+}
+
+section.event p {
+  margin-top: 1.1rem;
+}
+
+span.price {
+  background: var(--accent-color);
+  color: var(--off-white);
+  padding: 5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  float: right;
+  transform: rotate(-1deg) skew(-3deg);
+  margin-top: -3.5rem;
+}
+
+section.event-details {
+  display: flex;
+  gap: 1rem;
+}
+
+section.event-details .image {
+  flex: 0 0 20%;
+}
+
+section.event-details .details {
+  flex: 1;
+}
+
+section.event-details aside {
+  flex: 0 0 20%;
+}
+
+section.event-details h1 {
+  font-size: 2rem;
+}
+
+section.event-details h2,
+section.event-details h3 {
+  color: var(--secondary-text-color);
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.likes button {
+  border: 1px solid #cdd3d8;
+  background: transparent;
+  padding: 0.3rem 0.6rem;
+}
+
+.likes .count {
+  padding: 0.3rem 0.6rem;
+  border-left: none;
+}
+
+.register a.register {
+  display: inline-block;
+  background: #198754;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sold-out {
+  background: var(--sold-out-color);
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul.users,
+ul.registrations {
+  list-style: none;
+  padding: 0;
+}
+
+ul.users li,
+ul.registrations li {
+  margin: 1em 0;
+}
+
+section.user h2 {
+  color: var(--secondary-text-color);
+}
+
+section.user .actions a {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--medium-gray);
+}
+
+footer {
+  background: var(--black);
+  color: var(--light-gray);
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+section.admin {
+  text-align: center;
+  margin: 3rem 0;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+aside h4 {
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+}
+
+form {
+  max-width: 503px;
+  margin-top: 1.5rem;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+form input[type="submit"] {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.field_with_errors input,
+.field_with_errors textarea,
+.field_with_errors select {
+  background: var(--error-background-color);
+}
+
+.flash {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.flash.notice {
+  background: #d1e7dd;
+}
+
+.flash.alert {
+  background: #f8d7da;
+}
